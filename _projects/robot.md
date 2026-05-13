@@ -3,7 +3,7 @@ layout: project
 title: Robot
 description: Advanced CAD Project
 technologies: [Autodesk Fusion, C++]
-image: /assets/images/torque-wrench-cad.png
+image: /assets\images\Screenshot 2026-05-11 234547.jpg
 ---
 
-[MAE 3780 Robot Final Report]({{ "assets\files\Mechatronics Final Report.pdf" | relative_url }})
+[MAE 3780 Robot Final Report]({{ "/assets\files\Mechatronics Final Report.pdf" | relative_url }})
