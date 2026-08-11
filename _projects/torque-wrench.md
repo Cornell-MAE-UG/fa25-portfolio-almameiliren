@@ -13,4 +13,4 @@ For my Mechanics of Engineering Materials course, we were tasked with the design
 - Safety factor of X~K~ = 2 for crack growth from an assumed crack depth of 0.04 inches.
 - Fatigue stress safety factor of X~s~ = 1.5.
 
-Click here to access our design and analysis: [Torque Wrench Design and FEM Analysis]({{ "/assets/Torque Wrench Design and FEM Analysis.pdf" | relative_url }})
+Click here to access our design and analysis: [Torque Wrench Design and FEM Analysis]({{ "/assets/files/Torque Wrench Design and FEM Analysis.pdf" | relative_url }})

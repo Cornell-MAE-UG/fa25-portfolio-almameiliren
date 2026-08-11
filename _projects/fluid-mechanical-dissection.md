@@ -5,7 +5,7 @@ description: Dissecting a Salon Chair
 image: /assets/images/hydraulic-jack.jpg
 ---
 
-Click here to access the video presentation: [Dissection and Analysis of a Hydraulic Jack]({{ "/assets/MAE 3230 Fluid Mechanical Dissection.mp4" | relative_url }})
+Click here to access the video presentation: [Dissection and Analysis of a Hydraulic Jack]({{ "/assets/files/MAE 3230 Fluid Mechanical Dissection.mp4" | relative_url }})
 
 In collaboration with:
 - Adam Gelb (0:00-0:47)
