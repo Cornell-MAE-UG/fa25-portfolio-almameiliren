@@ -9,8 +9,6 @@ title: Alma Meili Ren
 ![Profile Picture]({{ "assets/images/profile-pic.jpg" | relative_url }}){: class="profile-image"}
 
  
-My name is {{ site.name }}, and I am a third year Mechanical Engineering student at Cornell University.
+Hi! My name is {{ site.name }}. I am a mechanical engineering student at Cornell University with a passion for sustainable energy solutions.
 
-My dream is to work for BLAH BLAH BLAH.
-
-Take a look at <a href="{{ "/projects/" | relative_url }}">my projects</a> and <a href="{{ "/cv/" | relative_url }}">CV</a>.
+Feel free to browse <a href="{{ "/projects/" | relative_url }}">my projects</a> and <a href="{{ "/cv/" | relative_url }}">CV</a>.
