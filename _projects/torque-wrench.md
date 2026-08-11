@@ -3,7 +3,8 @@ layout: project
 title: Torque Wrench
 description: Advanced CAD Project
 technologies: [Autodesk Fusion, Ansys, Matlab]
-image: /assets/images/torque-wrench-ansys.png
+image: /assets/images/torque-wrench-ansys.jpg
+
 ---
 
 For my Mechanics of Engineering Materials course, we were tasked with the design and FEM analysis a torque wrench that satisfies the following performance requirements:
