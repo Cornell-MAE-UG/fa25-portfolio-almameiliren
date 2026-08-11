@@ -1,14 +1,14 @@
 ---
 layout: project
-title: Fluid Mechanical Dissection
+title: Fluid Mechanical Analysis of a Hydraulic Jack
 description: Dissecting a Salon Chair
 technologies: []
-image: 
+image: /assets/images/hydraulic-jack.jpg
 ---
 
-[MAE 3230 Fluid Mechanical Dissection]({{ "/assets\MAE 3230 Fluid Mechanical Dissection.mp4" | relative_url }})
+Click here to access the video presentation: [Dissection and Analysis of a Hydraulic Jack]({{ "/assets\MAE 3230 Fluid Mechanical Dissection.mp4" | relative_url }})
 
-Contributors:
+In collaboration with:
 - Adam Gelb (0:00-0:47)
 - Sama Algurab (0:48-2:08)
 - Alma Meili Ren (2:09-3:15)
