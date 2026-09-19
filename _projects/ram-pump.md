@@ -3,9 +3,10 @@ layout: project
 title: Ram Pump
 description: 
 technologies: []
-image: 
+image: assets/images/Ram Pump CAD.png
 ---
 
+### About AguaClara
 AguaClara Cornell is a student-led engineering project team at Cornell University spearheads the research and development of water treatment technologies without any electricity. There are currently 26+ AguaClara plants serving 105,000+ people across 4 communities. 
 
 My contributions on the team are as follows:
