@@ -5,7 +5,7 @@ permalink: /cv/
 ---
 ## Curriculum Vitae
 
-[Download my resume]({{ "/assets/Alma Meili Ren Resume.pdf" | relative_url }}) in PDF format.
+[Download my resume]({{ "assets/files/Alma Meili Ren Resume.pdf" | relative_url }}) in PDF format.
 
 
 **Email:** [arr254@cornell.edu](mailto:arr254@cornell.edu) | | | **Phone:** (860) 754 7288
