@@ -4,6 +4,7 @@ title: Modeling an ICD Device
 description: Class project with Graphs
 technologies: [MATLAB]
 image: /assets/images/icd.webp
+order: 2
 ---
 
 <p><img src="{{ page.image | relative_url }}" alt="{{ page.imagealt }}" class="project-image" /></p>

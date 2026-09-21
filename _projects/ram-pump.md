@@ -4,6 +4,7 @@ title: Hydraulic Ram Pump
 description: 
 technologies: []
 image: assets/images/Ram Pump CAD.png
+order: 1
 ---
 
 ### About AguaClara
@@ -82,6 +83,7 @@ The final design of the ACVRP is a complex fluid mechanical system that utilizes
 **Snifter valve**
 
 
+**For more information:**
 I have specialized on the ram pump project since September 2024 to January 2026. My greatest accomplishment was leading the first-ever successful deployment of the ram pump in not one, but two water treatment facilities after 20 years of the pump's development. 
 
 All of AguaClara's researh and projects are available online at our Github. Feel free to review extensive ram pump documentation at this link: https://github.com/AguaClara/ram_pump/blob/master/README.md

@@ -4,6 +4,7 @@ title: Torque Wrench
 description: Advanced CAD Project
 technologies: [Autodesk Fusion, Ansys, Matlab]
 image: /assets/images/torque-wrench-ansys.jpg
+order: 3
 
 ---
 

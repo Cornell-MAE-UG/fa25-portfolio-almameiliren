@@ -3,6 +3,7 @@ layout: project
 title: Fluid Mechanical Analysis of a Hydraulic Jack
 description: Dissecting a Salon Chair
 image: /assets/images/hydraulic-jack.jpg
+order: 4
 ---
 
 <p><img src="{{ page.image | relative_url }}" alt="{{ page.imagealt }}" class="project-image" /></p>
