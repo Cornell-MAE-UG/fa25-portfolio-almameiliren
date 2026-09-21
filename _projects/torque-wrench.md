@@ -7,6 +7,8 @@ image: /assets/images/torque-wrench-ansys.jpg
 
 ---
 
+<p><img src="{{ page.image | relative_url }}" alt="{{ page.imagealt }}" class="project-image" /></p>
+
 For my Mechanics of Engineering Materials course, we were tasked with the design and FEM analysis a torque wrench that satisfies the following performance requirements:
 - Attain at least 1.0 mV/V output at the rated torque of 600 in-lbf.
 - Safety factor of X~0~ = 4 for yeild or brittle failure.
