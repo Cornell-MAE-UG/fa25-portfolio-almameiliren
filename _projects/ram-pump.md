@@ -209,7 +209,7 @@ order: 1
     
     <p><strong>Approach:</strong> Designed the Dual Support System using MASTAN and Autodesk Fusion to generate a nonlinear stiffness response matching the pressure profile. Validated design experimentally in the lab across three spring widths.</p>
 
-    <p><strong>Results:</strong> Lab and field testing confirmed closure success under high hydrostatic loading, but revealed a new failure mode, shaping future investigations.</p>
+    <p><strong>Results:</strong> Lab and field testing confirmed closure success under high hydrostatic loading, resolving the targetted failure, but revealed a new failure mode, shaping future investigations and driving further system improvements.</p>
   </div>
 
   <figure class="snifter-figure">
