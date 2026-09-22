@@ -205,11 +205,11 @@ order: 1
 
 <div class="snifter-layout">
   <div class="snifter-copy">
-    <p><strong>Objective:</strong> lkhkjh</p>
+    <p><strong>Objective:</strong> Resolve valve actuation failures observed in field caused by hydrostatic overloading.</p>
     
-    <p><strong>Approach:</strong> Designed and tested two snifter valve configurations (weak-spring, no-spring), generating pump performance curves across a range of flow rates to quantify the efficiency tradeoff.</p>
+    <p><strong>Approach:</strong> Designed the Dual Support System using MASTAN and Autodesk Fusion to generate a nonlinear stiffness response matching the pressure profile. Validated design experimentally in the lab across three spring widths.</p>
 
-    <p><strong>Results:</strong> Incorporation of a snifter valve with no internal spring resolves waterlogging without compromising system efficiency for typical operating head values (5-7 m).</p>
+    <p><strong>Results:</strong> Lab and field testing confirmed closure success under high hydrostatic loading, but revealed a new failure mode, shaping future investigations.</p>
   </div>
 
   <figure class="snifter-figure">
