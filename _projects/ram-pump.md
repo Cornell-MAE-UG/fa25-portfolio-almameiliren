@@ -214,13 +214,13 @@ order: 1
 
   <figure class="snifter-figure">
     <a
-      href="{{ 'assets\images\ram-pump\Ram Pump Final Poster SP25.pptx.png' | relative_url }}"
+      href="{{ 'assets/images/ram-pump/Ram Pump Final Poster SP25.pptx.png' | relative_url }}"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Open snifter valve image in a new tab"
     >
       <img
-        src="{{ 'assets\images\ram-pump\Ram Pump Final Poster SP25.pptx.png' | relative_url }}"
+        src="{{ 'assets/images/ram-pump/Ram Pump Final Poster SP25.pptx.png' | relative_url }}"
         alt="Snifter valve schematic or pump illustration"
       />
     </a>
