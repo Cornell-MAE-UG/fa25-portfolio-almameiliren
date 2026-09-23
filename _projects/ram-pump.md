@@ -26,6 +26,23 @@ order: 1
   </figure>
 </div>
 
+<div class="ram-pump-lab-row">
+  <figure class="ram-pump-lab-figure ram-pump-lab-schematic">
+    <img
+      src="{{ '/assets/images/ram-pump/lab-schematic.png' | relative_url }}"
+      alt="Lab schematic of the AguaClara Vertical Ram Pump test setup"
+    />
+    <figcaption>Lab schematic of the ACVRP experimental setup at Cornell.</figcaption>
+  </figure>
+
+  <figure class="ram-pump-lab-figure ram-pump-lab-video">
+    <video controls playsinline preload="metadata">
+      <source src="{{ '/assets/images/ram-pump/lab-scale-operation.MOV' | relative_url }}" type="video/quicktime" />
+    </video>
+    <figcaption>Lab-scale operation of the ACVRP prototype in the Cornell test rig.</figcaption>
+  </figure>
+</div>
+
 <style>
   .ram-pump-intro {
     display: flex;
@@ -48,6 +65,44 @@ order: 1
     border-radius: 8px;
     flex-shrink: 0;
     margin: 0;
+  }
+
+  .ram-pump-lab-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1.75rem auto 0;
+    max-width: 980px;
+  }
+
+  .ram-pump-lab-figure {
+    flex: 1 1 0;
+    max-width: 440px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .ram-pump-lab-schematic img,
+  .ram-pump-lab-video video {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+
+  .ram-pump-lab-video video {
+    background: #000;
+    min-height: 220px;
+  }
+
+  .ram-pump-lab-figure figcaption {
+    margin-top: 0.6rem;
+    text-align: center;
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.4;
   }
 
   .ram-pump-report-button {
