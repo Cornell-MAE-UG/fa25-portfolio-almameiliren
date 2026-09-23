@@ -37,9 +37,9 @@ order: 1
 
   <figure class="ram-pump-lab-figure ram-pump-lab-video">
     <video controls playsinline preload="metadata">
-      <source src="{{ '/assets/images/ram-pump/lab-scale-operation.MOV' | relative_url }}" type="video/quicktime" />
+      <source src="{{ '/assets/images/ram-pump/lab-scale-operation.mp4' | relative_url }}" type="video/mp4" />
     </video>
-    <figcaption>Lab-scale operation of the ACVRP prototype in the Cornell test rig.</figcaption>
+    <figcaption>Lab-scale operation of the ACVRP prototype.</figcaption>
   </figure>
 </div>
 
