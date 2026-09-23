@@ -487,14 +487,14 @@ order: 1
 
       <figure class="deployment-slide">
         <video controls playsinline preload="metadata">
-          <source src="{{ '/assets/images/ram-pump/deployment/operation.MOV' | relative_url }}" type="video/mp4" />
+          <source src="{{ '/assets/images/ram-pump/deployment/operation.mp4' | relative_url }}" type="video/mp4" />
         </video>
         <figcaption>Field operation of the installed ACVRP system under real flow conditions.</figcaption>
       </figure>
 
       <figure class="deployment-slide">
         <video controls playsinline preload="metadata">
-          <source src="{{ '/assets/images/ram-pump/deployment/spring.MOV' | relative_url }}" type="video/mp4" />
+          <source src="{{ '/assets/images/ram-pump/deployment/spring.mp4' | relative_url }}" type="video/mp4" />
         </video>
         <figcaption>Spring behavior and valve response during system operation and calibration.</figcaption>
       </figure>
@@ -509,16 +509,50 @@ order: 1
   const deploymentTrack = document.querySelector('.deployment-carousel-track');
   const deploymentPrev = document.querySelector('.deployment-carousel-btn.prev');
   const deploymentNext = document.querySelector('.deployment-carousel-btn.next');
+  const deploymentFrame = document.querySelector('.deployment-carousel-frame');
   let deploymentCurrent = 0;
-  let deploymentTimer;
+  let deploymentTimer = null;
+  let deploymentIsSwitching = false;
 
-  function showDeploymentSlide(index) {
-    deploymentCurrent = (index + deploymentSlides.length) % deploymentSlides.length;
-    deploymentTrack.style.transform = `translateX(-${deploymentCurrent * 100}%)`;
+  function pauseAllDeploymentVideos() {
+    deploymentSlides.forEach((slide) => {
+      const video = slide.querySelector('video');
+      if (video) {
+        video.pause();
+      }
+    });
   }
 
-  function resetDeploymentTimer() {
-    clearInterval(deploymentTimer);
+  function showDeploymentSlide(index) {
+    deploymentIsSwitching = true;
+    pauseAllDeploymentVideos();
+    deploymentCurrent = (index + deploymentSlides.length) % deploymentSlides.length;
+    deploymentTrack.style.transform = `translateX(-${deploymentCurrent * 100}%)`;
+
+    setTimeout(() => {
+      deploymentIsSwitching = false;
+    }, 120);
+  }
+
+  function pauseDeploymentTimer() {
+    if (deploymentTimer) {
+      clearInterval(deploymentTimer);
+      deploymentTimer = null;
+    }
+  }
+
+  function startDeploymentTimer() {
+    if (deploymentIsSwitching) {
+      return;
+    }
+
+    const currentSlide = deploymentSlides[deploymentCurrent];
+    const currentVideo = currentSlide && currentSlide.querySelector('video');
+    if (currentVideo && !currentVideo.paused) {
+      return;
+    }
+
+    pauseDeploymentTimer();
     deploymentTimer = setInterval(() => {
       showDeploymentSlide(deploymentCurrent + 1);
     }, 5000);
@@ -526,19 +560,44 @@ order: 1
 
   function deploymentGoNext() {
     showDeploymentSlide(deploymentCurrent + 1);
-    resetDeploymentTimer();
+    startDeploymentTimer();
   }
 
   function deploymentGoPrev() {
     showDeploymentSlide(deploymentCurrent - 1);
-    resetDeploymentTimer();
+    startDeploymentTimer();
   }
 
   if (deploymentSlides.length > 0) {
     showDeploymentSlide(0);
+
+    deploymentSlides.forEach((slide) => {
+      const video = slide.querySelector('video');
+      if (!video) return;
+
+      video.addEventListener('play', () => {
+        pauseDeploymentTimer();
+      });
+
+      video.addEventListener('pause', () => {
+        if (!deploymentIsSwitching) {
+          startDeploymentTimer();
+        }
+      });
+
+      video.addEventListener('ended', () => {
+        if (!deploymentIsSwitching) {
+          startDeploymentTimer();
+        }
+      });
+    });
+
     deploymentPrev.addEventListener('click', deploymentGoPrev);
     deploymentNext.addEventListener('click', deploymentGoNext);
-    resetDeploymentTimer();
+    deploymentFrame.addEventListener('mouseenter', pauseDeploymentTimer);
+    deploymentFrame.addEventListener('mouseleave', startDeploymentTimer);
+
+    startDeploymentTimer();
   }
 </script>
 
