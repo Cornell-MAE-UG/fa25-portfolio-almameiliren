@@ -510,28 +510,22 @@ order: 1
   const deploymentPrev = document.querySelector('.deployment-carousel-btn.prev');
   const deploymentNext = document.querySelector('.deployment-carousel-btn.next');
   const deploymentFrame = document.querySelector('.deployment-carousel-frame');
+  const deploymentHasVideo = deploymentSlides.some((slide) => slide.querySelector('video'));
   let deploymentCurrent = 0;
   let deploymentTimer = null;
-  let deploymentIsSwitching = false;
 
   function pauseAllDeploymentVideos() {
     deploymentSlides.forEach((slide) => {
       const video = slide.querySelector('video');
-      if (video) {
+      if (video && !video.paused) {
         video.pause();
       }
     });
   }
 
   function showDeploymentSlide(index) {
-    deploymentIsSwitching = true;
-    pauseAllDeploymentVideos();
     deploymentCurrent = (index + deploymentSlides.length) % deploymentSlides.length;
     deploymentTrack.style.transform = `translateX(-${deploymentCurrent * 100}%)`;
-
-    setTimeout(() => {
-      deploymentIsSwitching = false;
-    }, 120);
   }
 
   function pauseDeploymentTimer() {
@@ -542,13 +536,8 @@ order: 1
   }
 
   function startDeploymentTimer() {
-    if (deploymentIsSwitching) {
-      return;
-    }
-
-    const currentSlide = deploymentSlides[deploymentCurrent];
-    const currentVideo = currentSlide && currentSlide.querySelector('video');
-    if (currentVideo && !currentVideo.paused) {
+    if (deploymentHasVideo) {
+      pauseDeploymentTimer();
       return;
     }
 
@@ -559,11 +548,13 @@ order: 1
   }
 
   function deploymentGoNext() {
+    pauseAllDeploymentVideos();
     showDeploymentSlide(deploymentCurrent + 1);
     startDeploymentTimer();
   }
 
   function deploymentGoPrev() {
+    pauseAllDeploymentVideos();
     showDeploymentSlide(deploymentCurrent - 1);
     startDeploymentTimer();
   }
@@ -580,13 +571,13 @@ order: 1
       });
 
       video.addEventListener('pause', () => {
-        if (!deploymentIsSwitching) {
+        if (!deploymentHasVideo) {
           startDeploymentTimer();
         }
       });
 
       video.addEventListener('ended', () => {
-        if (!deploymentIsSwitching) {
+        if (!deploymentHasVideo) {
           startDeploymentTimer();
         }
       });
