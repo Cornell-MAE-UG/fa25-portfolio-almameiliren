@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
 </head>
 
-<body>
+<body class="{% if page.url == '/' %}home-page{% endif %}">
 
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark text-white";>
