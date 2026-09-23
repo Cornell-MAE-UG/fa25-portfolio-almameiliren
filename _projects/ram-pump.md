@@ -453,7 +453,18 @@ order: 1
 
 **Process:** In January 2026, I led a team of AguaClara students, plant operators, and local technicians through on-site installation at two plants. This meant preparing a user's manual complete with a Bill of Materials, assembling the system on-site, and calibrating the flat spring until the pump ran reliably under real (not simulated) driving head.
 
-**Outcome:** First successful permanent ACVRP installations in the project's 20 years of development. The San Juan Planes system pumps water 5 meters vertically at 3.33 L/min; the Moroceli system pumps 2 meters at 2.50 L/min. Both pumps are now operating without electricity or daily operator intervention, and the San Juan Planes pump's recycled water even supplies a small nearby community of 300.
+**Outcome:** First successful permanent ACVRP installations in the project's 20 years of development. The San Juan Planes system pumps water 5 meters vertically at 3.33 L/min; the Moroceli system pumps 2 meters at 2.50 L/min. Both pumps are now operating without electricity or daily operator intervention, and the San Juan Planes pump's recycled water even supplies a small nearby community of 300, while the Moroceli plant diverts the recycled water into clean water storage tanks.
+
+<div style="text-align: center; margin: 1.5rem 0 0.5rem;">
+  <a
+    class="ram-pump-report-button"
+    href="{{ '/assets/files/AguaClara Ram Pump Manual.pdf' | relative_url }}"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Click here to access the official installation manual
+  </a>
+</div>
 
 <div class="deployment-carousel" aria-label="Field deployment media gallery">
   <div class="deployment-carousel-frame">
@@ -461,30 +472,25 @@ order: 1
 
     <div class="deployment-carousel-track">
       <figure class="deployment-slide">
-        <img src="{{ '/assets/images/ram-pump/deployment/civil.jpg' | relative_url }}" alt="Civil site work before the installation" />
-        <figcaption>Site preparation and civil work before the pump installation.</figcaption>
-      </figure>
-
-      <figure class="deployment-slide">
-        <img src="{{ '/assets/images/ram-pump/deployment/construct.png' | relative_url }}" alt="Construction and assembly of the ram pump system" />
-        <figcaption>Assembly of the ram pump system at the project site.</figcaption>
+        <img src="{{ '/assets/images/ram-pump/deployment/sjp-installment.JPG' | relative_url }}" alt="Installation at the San Juan Planes plant" />
+        <figcaption>Installation at the San Juan Planes site.</figcaption>
       </figure>
 
       <figure class="deployment-slide">
         <video controls playsinline preload="metadata">
-          <source src="{{ '/assets/images/ram-pump/deployment/fill-bucket.mp4' | relative_url }}" type="video/mp4" />
+          <source src="{{ '/assets/images/ram-pump/deployment/operation.mp4' | relative_url }}" type="video/mp4" />
         </video>
-        <figcaption>Filling the bucket and testing the water transfer process during deployment.</figcaption>
+        <figcaption>Successful field operation of the ACVRP under real flow conditions.</figcaption>
       </figure>
 
       <figure class="deployment-slide">
-        <img src="{{ '/assets/images/ram-pump/deployment/moro-installment.png' | relative_url }}" alt="Installation at the Moroceli plant" />
-        <figcaption>Field installation at the Moroceli plant.</figcaption>
+        <img src="{{ '/assets/images/ram-pump/deployment/construct.png' | relative_url }}" alt="Construction and assembly of the ram pump system" />
+        <figcaption>Assembly of the ACVRP at the project site.</figcaption>
       </figure>
 
       <figure class="deployment-slide">
-        <img src="{{ '/assets/images/ram-pump/deployment/sjp-installment.JPG' | relative_url }}" alt="Installation at the San Juan Planes plant" />
-        <figcaption>Installation at the San Juan Planes site with local team support.</figcaption>
+        <img src="{{ '/assets/images/ram-pump/deployment/civil.jpg' | relative_url }}" alt="Site preparation" />
+        <figcaption>Site preparation discussion with facility civil engineer.</figcaption>
       </figure>
 
       <figure class="deployment-slide">
@@ -494,16 +500,21 @@ order: 1
 
       <figure class="deployment-slide">
         <video controls playsinline preload="metadata">
-          <source src="{{ '/assets/images/ram-pump/deployment/operation.mp4' | relative_url }}" type="video/mp4" />
+          <source src="{{ '/assets/images/ram-pump/deployment/spring.mp4' | relative_url }}" type="video/mp4" />
         </video>
-        <figcaption>Field operation of the installed ACVRP system under real flow conditions.</figcaption>
+        <figcaption>Spring behavior with easy operating procedure.</figcaption>
       </figure>
 
       <figure class="deployment-slide">
         <video controls playsinline preload="metadata">
-          <source src="{{ '/assets/images/ram-pump/deployment/spring.mp4' | relative_url }}" type="video/mp4" />
+          <source src="{{ '/assets/images/ram-pump/deployment/fill-bucket.mp4' | relative_url }}" type="video/mp4" />
         </video>
-        <figcaption>Spring behavior and valve response during system operation and calibration.</figcaption>
+        <figcaption>Plant operators using the ACVRP to fill chemical stock tanks.</figcaption>
+      </figure>
+
+      <figure class="deployment-slide">
+        <img src="{{ '/assets/images/ram-pump/deployment/moro-installment.png' | relative_url }}" alt="Installation at the Moroceli plant" />
+        <figcaption>Field installation at the Moroceli site.</figcaption>
       </figure>
     </div>
 
