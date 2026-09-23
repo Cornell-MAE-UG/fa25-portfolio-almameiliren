@@ -87,17 +87,14 @@ order: 1
   .ram-pump-lab-video video {
     display: block;
     width: 100%;
-    height: auto;
+    height: 350px;
+    object-fit: contain;
     margin: 0 auto;
     border-radius: 10px;
   }
 
   .ram-pump-lab-video video {
     background: #000;
-    height: 100%;
-    min-height: 220px;
-    max-height: 300px;
-    object-fit: contain;
   }
 
   .ram-pump-lab-figure figcaption {
@@ -667,5 +664,7 @@ order: 1
     startDeploymentTimer();
   }
 </script>
+
+**Future deployment work:** AguaClara facility building architecture currently does not support the integration of the ACVRP, which is why the two deployments are currently supported by makeshift structures. After having proven successful operation, ram pump teams will now collaborate with AguaClara Reach civil engineers to design supports for the system as well as a way to recycle ram pump "waste" water by diverting it to the delivery tanks to supply communities.
 
 ---

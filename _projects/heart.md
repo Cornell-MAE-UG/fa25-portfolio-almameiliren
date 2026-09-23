@@ -3,7 +3,7 @@ layout: project
 title: Modeling an ICD Device
 description: Class project with Graphs
 technologies: [MATLAB]
-image: /assets/images/icd.webp
+image: /assets/images/heart.png
 order: 2
 ---
 
