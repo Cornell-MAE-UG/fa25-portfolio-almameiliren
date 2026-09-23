@@ -38,16 +38,16 @@ title: Alma Meili Ren
       <div class="home-preview__strip" aria-label="Project preview gallery">
         <div class="home-preview__track">
           <figure class="home-preview__slide">
-            <img src="{{ 'assets\images\cad-creative\render-1.jpg' | relative_url }}" alt="Ram pump deployment preview" />
+            <img src="{{ 'assets/images/cad-creative/render-1.jpg' | relative_url }}" alt="Ram pump deployment preview" />
           </figure>
           <figure class="home-preview__slide">
-            <img src="{{ 'assets\images\ram-pump\ram-pump.png' | relative_url }}" alt="Ram pump assembly preview" />
+            <img src="{{ 'assets/images/ram-pump/ram-pump.png' | relative_url }}" alt="Ram pump assembly preview" />
           </figure>
           <figure class="home-preview__slide">
-            <img src="{{ 'assets\images\ram-pump\lab-schematic.png' | relative_url }}" alt="Ram pump field training preview" />
+            <img src="{{ 'assets/images/ram-pump/lab-schematic.png' | relative_url }}" alt="Ram pump field training preview" />
           </figure>
           <figure class="home-preview__slide">
-            <img src="{{ 'assets\images\torque-wrench-ansys.jpg' | relative_url }}" alt="Site preparation preview" />
+            <img src="{{ 'assets/images/torque-wrench-ansys.jpg' | relative_url }}" alt="Site preparation preview" />
           </figure>
           <figure class="home-preview__slide">
             <img src="{{ 'assets/images/hydraulic-jack.jpg' | relative_url }}" alt="Ram pump deployment preview duplicate" />
