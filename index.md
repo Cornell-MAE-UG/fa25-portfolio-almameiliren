@@ -23,6 +23,46 @@ title: Alma Meili Ren
 
     <p>Outside of engineering, I enjoy playing bass guitar, roller skating, and snowboarding, and one of my main goals in life is to own a pet snake.</p>
 
-    <p>Feel free to browse some of <a href="{{ "/projects/" | relative_url }}">my projects</a> (more to come!) and <a href="{{ "/cv/" | relative_url }}">CV</a>.</p>
+    <p>Feel free to browse some of my projects and CV!</p>
+
+    <div class="home-actions">
+      <a href="{{ "/projects/" | relative_url }}" class="home-button home-button--primary">View my projects</a>
+      <a href="{{ "/cv/" | relative_url }}" class="home-button home-button--secondary">View my resume</a>
+    </div>
+
+    <div class="home-preview">
+      <h2 class="home-preview__title">
+        <a href="{{ "/projects/" | relative_url }}">Sneak peak -- view the full projects on the projects page</a>
+      </h2>
+
+      <div class="home-preview__strip" aria-label="Project preview gallery">
+        <div class="home-preview__track">
+          <figure class="home-preview__slide">
+            <img src="{{ 'assets\images\cad-creative\render-1.jpg' | relative_url }}" alt="Ram pump deployment preview" />
+          </figure>
+          <figure class="home-preview__slide">
+            <img src="{{ 'assets\images\ram-pump\ram-pump.png' | relative_url }}" alt="Ram pump assembly preview" />
+          </figure>
+          <figure class="home-preview__slide">
+            <img src="{{ 'assets\images\ram-pump\lab-schematic.png' | relative_url }}" alt="Ram pump field training preview" />
+          </figure>
+          <figure class="home-preview__slide">
+            <img src="{{ 'assets\images\torque-wrench-ansys.jpg' | relative_url }}" alt="Site preparation preview" />
+          </figure>
+          <figure class="home-preview__slide">
+            <img src="{{ 'assets/images/hydraulic-jack.jpg' | relative_url }}" alt="Ram pump deployment preview duplicate" />
+          </figure>
+          <figure class="home-preview__slide">
+            <img src="{{ '/assets/images/ram-pump/deployment/construct.png' | relative_url }}" alt="Ram pump assembly preview duplicate" />
+          </figure>
+          <figure class="home-preview__slide">
+            <img src="{{ 'assets\images\ram-pump\waste-valve.png' | relative_url }}" alt="Ram pump field training preview duplicate" />
+          </figure>
+          <figure class="home-preview__slide">
+            <img src="{{ 'assets\images\ram-pump\deployment\sjp-installment.JPG' | relative_url }}" alt="Site preparation preview duplicate" />
+          </figure>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

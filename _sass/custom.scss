@@ -204,6 +204,101 @@ footer {
   padding: 2rem 30px 8rem;
 }
 
+.home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.home-button {
+  display: inline-block;
+  padding: 0.9rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-button:hover {
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.home-button--primary {
+  background: $primary-color;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(58, 63, 88, 0.2);
+}
+
+.home-button--secondary {
+  background: transparent;
+  color: $primary-color;
+  border: 2px solid $primary-color;
+}
+
+.home-preview {
+  margin-top: 3rem;
+}
+
+.home-preview__title {
+  margin: 0 0 1rem;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  text-transform: none;
+}
+
+.home-preview__title a {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+.home-preview__title a:hover {
+  text-decoration: underline;
+}
+
+.home-preview__strip {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 0.5rem 0;
+  background: #f8f8f8;
+  border-radius: 18px;
+  box-shadow: inset 0 0 0 1px rgba(58, 63, 88, 0.08);
+}
+
+.home-preview__track {
+  display: flex;
+  width: max-content;
+  gap: 1rem;
+  animation: homePreviewSlide 28s linear infinite;
+}
+
+.home-preview__slide {
+  flex: 0 0 300px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.home-preview__slide img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+@keyframes homePreviewSlide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 .profile-image {
   float: left;
   margin: 0 25px 25px 0;
