@@ -94,7 +94,10 @@ order: 1
 
   .ram-pump-lab-video video {
     background: #000;
+    height: 100%;
     min-height: 220px;
+    max-height: 300px;
+    object-fit: contain;
   }
 
   .ram-pump-lab-figure figcaption {
