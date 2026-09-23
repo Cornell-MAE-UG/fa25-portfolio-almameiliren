@@ -69,7 +69,7 @@ order: 1
   }
 
   .snifter-layout {
-    --snifter-image-width: 360px;
+    --snifter-image-width: 400px;
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -88,6 +88,17 @@ order: 1
     margin: 0;
   }
 
+  .snifter-figure a {
+    display: block;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  }
+
+  .snifter-figure a:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+    filter: brightness(1.02);
+  }
+
   .snifter-figure img {
     display: block;
     width: 100%;
@@ -95,54 +106,195 @@ order: 1
     border-radius: 8px;
   }
 
-  .photo-marquee {
+  .nonlinear-layout {
+    --nonlinear-poster-width: 400px;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .nonlinear-copy-column {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .nonlinear-copy-column p {
+    margin-top: 0;
+    margin-bottom: 0.9rem;
+  }
+
+  .nonlinear-button-row {
+    margin-top: 1.5rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nonlinear-poster {
+    display: block;
+    width: var(--nonlinear-poster-width);
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    margin-top: 0.75rem;
+  }
+
+  .nonlinear-poster:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+    filter: brightness(1.02);
+  }
+
+  .nonlinear-poster img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .nonlinear-poster-caption {
+    margin-top: 0.5rem;
+    text-align: center;
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .nonlinear-marquee {
     position: relative;
-    margin: 2rem 0 1rem;
+    margin: 1.5rem 0 0;
     overflow: hidden;
     border-radius: 12px;
     background: rgba(58, 87, 120, 0.04);
     padding: 0.75rem 0;
+    border: 1px solid rgba(58, 87, 120, 0.08);
   }
 
-  .photo-marquee-track {
+  .nonlinear-marquee-track {
     display: flex;
     width: max-content;
-    animation: photo-marquee 32s linear infinite;
+    animation: nonlinear-marquee 28s linear infinite;
     will-change: transform;
   }
 
-  .photo-marquee:hover .photo-marquee-track {
+  .nonlinear-marquee:hover .nonlinear-marquee-track {
     animation-play-state: paused;
   }
 
-  .photo-marquee-item {
+  .nonlinear-marquee-item {
     flex: 0 0 auto;
-    width: 220px;
     margin-right: 1rem;
     text-align: center;
   }
 
-  .photo-marquee-item img {
+  .nonlinear-marquee-item img {
     display: block;
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    width: auto;
+    height: 200px;
+    object-fit: contain;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
   }
 
-  .photo-marquee-item figcaption {
+  .nonlinear-marquee-item figcaption {
     margin-top: 0.4rem;
     font-size: 0.8rem;
     color: #555;
   }
 
-  @keyframes photo-marquee {
+  .deployment-carousel {
+    position: relative;
+    max-width: 820px;
+    margin: 2rem auto 0;
+  }
+
+  .deployment-carousel-frame {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: rgba(58, 87, 120, 0.04);
+    border: 1px solid rgba(58, 87, 120, 0.08);
+    padding: 1rem;
+  }
+
+  .deployment-carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+  }
+
+  .deployment-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .deployment-slide img,
+  .deployment-slide video {
+    display: block;
+    width: 100%;
+    max-height: 540px;
+    object-fit: contain;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: #ffffff;
+  }
+
+  .deployment-slide figcaption {
+    margin-top: 0.8rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #4a4a4a;
+    line-height: 1.5;
+  }
+
+  .deployment-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(58, 63, 88, 0.9);
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+
+  .deployment-carousel-btn.prev {
+    left: 0.75rem;
+  }
+
+  .deployment-carousel-btn.next {
+    right: 0.75rem;
+  }
+
+  .deployment-carousel-btn:hover {
+    background: rgba(58, 63, 88, 1);
+  }
+
+  @keyframes nonlinear-marquee {
     from {
       transform: translateX(0);
     }
     to {
       transform: translateX(-50%);
+    }
+  }
+
+  @media (max-width: 900px) {
+    .nonlinear-layout {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .nonlinear-poster {
+      width: min(100%, 220px);
     }
   }
 
@@ -159,7 +311,7 @@ order: 1
 
 
 ---
-## Sub-Project: Snifter Valve
+### Sub-Project: Snifter Valve
 
 <div class="snifter-layout">
   <div class="snifter-copy">
@@ -201,36 +353,36 @@ order: 1
 
 ---
 
-## Sub-Project: Nonlinear Spring
+### Sub-Project: Nonlinear Spring
 
-<div class="snifter-layout">
-  <div class="snifter-copy">
+<div class="nonlinear-layout">
+  <div class="nonlinear-copy-column">
     <p><strong>Objective:</strong> Resolve valve actuation failures observed in field caused by hydrostatic overloading.</p>
-    
+
     <p><strong>Approach:</strong> Designed the Dual Support System using MASTAN and Autodesk Fusion to generate a nonlinear stiffness response matching the pressure profile. Validated design experimentally in the lab across three spring widths.</p>
 
     <p><strong>Results:</strong> Lab and field testing confirmed closure success under high hydrostatic loading, resolving the targetted failure, but revealed a new failure mode, shaping future investigations and driving further system improvements.</p>
+
   </div>
 
-  <figure class="snifter-figure">
+  <figure style="margin: 0;">
     <a
-      href="{{ 'assets/images/ram-pump/Ram Pump Final Poster SP25.pptx.png' | relative_url }}"
+      class="nonlinear-poster"
+      href="{{ 'assets/images/ram-pump/nonlinear-spring/Ram Pump Final Poster SP25.pptx.png' | relative_url }}"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Open snifter valve image in a new tab"
+      aria-label="Open the nonlinear spring poster in a new tab"
     >
       <img
-        src="{{ 'assets/images/ram-pump/Ram Pump Final Poster SP25.pptx.png' | relative_url }}"
-        alt="Snifter valve schematic or pump illustration"
+        src="{{ 'assets/images/ram-pump/nonlinear-spring/Ram Pump Final Poster SP25.pptx.png' | relative_url }}"
+        alt="Nonlinear spring poster"
       />
     </a>
-    <figcaption style="margin-top: 0.5rem; text-align: center; color: #555; font-size: 0.9rem;">
-      Nonlinear spring performance and design summary. (click to view)
-    </figcaption>
+    <figcaption class="nonlinear-poster-caption">Nonlinear spring support system poster. (click to view)</figcaption>
   </figure>
 </div>
 
-<div style="text-align: center; margin: 2rem 0;">
+<div class="nonlinear-button-row" style="text-align: center; margin: 2rem 0 0;">
   <a
     class="ram-pump-report-button"
     href="https://docs.google.com/document/d/1zlH7xsi56FLAr1i4EO32GFQONhIG7R9UNZeWnij9IRI/edit?usp=sharing"
@@ -241,61 +393,153 @@ order: 1
   </a>
 </div>
 
-<div class="photo-marquee" aria-label="Project photo strip">
-  <div class="photo-marquee-track">
-    <figure class="photo-marquee-item">
-      <img src="{{ '/assets/images/ram-pump/field-cad.png' | relative_url }}" alt="Field-scale ram pump CAD model" />
-      <figcaption>Field CAD</figcaption>
+<div class="nonlinear-marquee" aria-label="Continuous photo strip">
+  <div class="nonlinear-marquee-track">
+    <figure class="nonlinear-marquee-item">
+      <img src="{{ '/assets/images/ram-pump/nonlinear-spring/cad-dual-sup.png' | relative_url }}" alt="CAD model of dual support system" />
+      <figcaption>Dual support system CAD Model</figcaption>
     </figure>
-    <figure class="photo-marquee-item">
-      <img src="{{ '/assets/images/ram-pump/field-cad-2.png' | relative_url }}" alt="Labeled field-scale ram pump CAD model" />
-      <figcaption>Labeled CAD</figcaption>
+    <figure class="nonlinear-marquee-item">
+      <img src="{{ '/assets/images/ram-pump/nonlinear-spring/lab-dual-sup.jpg' | relative_url }}" alt="Lab setup for dual support system" />
+      <figcaption>Experimental setup</figcaption>
     </figure>
-    <figure class="photo-marquee-item">
-      <img src="{{ '/assets/images/ram-pump/mount.png' | relative_url }}" alt="Flat spring mount design" />
-      <figcaption>Spring mount</figcaption>
+    <figure class="nonlinear-marquee-item">
+      <img src="{{ '/assets/images/ram-pump/nonlinear-spring/mastan.png' | relative_url }}" alt="MASTAN analysis plot" />
+      <figcaption>MASTAN analysis</figcaption>
     </figure>
-    <figure class="photo-marquee-item">
-      <img src="{{ '/assets/images/ram-pump/waste-valve.png' | relative_url }}" alt="Modified waste valve design" />
-      <figcaption>Waste valve</figcaption>
-    </figure>
-    <figure class="photo-marquee-item">
-      <img src="{{ '/assets/images/ram-pump/deployment/construct.png' | relative_url }}" alt="Assembling the ram pump for deployment" />
-      <figcaption>Deployment</figcaption>
-    </figure>
-    <figure class="photo-marquee-item">
-      <img src="{{ '/assets/images/ram-pump/deployment/teach.png' | relative_url }}" alt="Teaching plant operators" />
-      <figcaption>Training</figcaption>
+    <figure class="nonlinear-marquee-item">
+      <img src="{{ '/assets/images/ram-pump/nonlinear-spring/osu-dual-sup.png' | relative_url }}" alt="OSU dual support design" />
+      <figcaption>Field experimentation design</figcaption>
     </figure>
 
-    <figure class="photo-marquee-item">
-      <img src="{{ '/assets/images/ram-pump/field-cad.png' | relative_url }}" alt="Field-scale ram pump CAD model" />
-      <figcaption>Field CAD</figcaption>
+    <figure class="nonlinear-marquee-item">
+      <img src="{{ '/assets/images/ram-pump/nonlinear-spring/cad-dual-sup.png' | relative_url }}" alt="CAD model of dual support system" />
+      <figcaption>CAD model</figcaption>
     </figure>
-    <figure class="photo-marquee-item">
-      <img src="{{ '/assets/images/ram-pump/field-cad-2.png' | relative_url }}" alt="Labeled field-scale ram pump CAD model" />
-      <figcaption>Labeled CAD</figcaption>
+    <figure class="nonlinear-marquee-item">
+      <img src="{{ '/assets/images/ram-pump/nonlinear-spring/lab-dual-sup.jpg' | relative_url }}" alt="Lab setup for dual support system" />
+      <figcaption>Lab setup</figcaption>
     </figure>
-    <figure class="photo-marquee-item">
-      <img src="{{ '/assets/images/ram-pump/mount.png' | relative_url }}" alt="Flat spring mount design" />
-      <figcaption>Spring mount</figcaption>
+    <figure class="nonlinear-marquee-item">
+      <img src="{{ '/assets/images/ram-pump/nonlinear-spring/mastan.png' | relative_url }}" alt="MASTAN analysis plot" />
+      <figcaption>MASTAN</figcaption>
     </figure>
-    <figure class="photo-marquee-item">
-      <img src="{{ '/assets/images/ram-pump/waste-valve.png' | relative_url }}" alt="Modified waste valve design" />
-      <figcaption>Waste valve</figcaption>
+    <figure class="nonlinear-marquee-item">
+      <img src="{{ '/assets/images/ram-pump/nonlinear-spring/osu-dual-sup.png' | relative_url }}" alt="OSU dual support design" />
+      <figcaption>Design</figcaption>
     </figure>
-    <figure class="photo-marquee-item">
-      <img src="{{ '/assets/images/ram-pump/deployment/construct.png' | relative_url }}" alt="Assembling the ram pump for deployment" />
-      <figcaption>Deployment</figcaption>
-    </figure>
-    <figure class="photo-marquee-item">
-      <img src="{{ '/assets/images/ram-pump/deployment/teach.png' | relative_url }}" alt="Teaching plant operators" />
-      <figcaption>Training</figcaption>
+    <figure class="nonlinear-marquee-item">
+      <img src="{{ '/assets/images/ram-pump/nonlinear-spring/Ram Pump Final Poster SP25.pptx.png' | relative_url }}" alt="Poster summary" />
+      <figcaption>Poster</figcaption>
     </figure>
   </div>
 </div>
 
 ---
 
+
+
+
+### Field Deployment
+
+**Objective:** Bring the finalized ACVRP design to real AguaClara plants in Honduras to internally deliver a reliable clean water supply within the facilities, eliminating manual labor.
+
+**Process:** In January 2026, I led a team of AguaClara students, plant operators, and local technicians through on-site installation at two plants. This meant preparing a user's manual complete with a Bill of Materials, assembling the system on-site, and calibrating the flat spring until the pump ran reliably under real (not simulated) driving head.
+
+**Outcome:** First successful permanent ACVRP installations in the project's 20 years of development. The San Juan Planes system pumps water 5 meters vertically at 3.33 L/min; the Moroceli system pumps 2 meters at 2.50 L/min. Both pumps are now operating without electricity or daily operator intervention, and the San Juan Planes pump's recycled water even supplies a small nearby community of 300.
+
+<div class="deployment-carousel" aria-label="Field deployment media gallery">
+  <div class="deployment-carousel-frame">
+    <button class="deployment-carousel-btn prev" type="button" aria-label="Previous deployment media">&#10094;</button>
+
+    <div class="deployment-carousel-track">
+      <figure class="deployment-slide">
+        <img src="{{ '/assets/images/ram-pump/deployment/civil.jpg' | relative_url }}" alt="Civil site work before the installation" />
+        <figcaption>Site preparation and civil work before the pump installation.</figcaption>
+      </figure>
+
+      <figure class="deployment-slide">
+        <img src="{{ '/assets/images/ram-pump/deployment/construct.png' | relative_url }}" alt="Construction and assembly of the ram pump system" />
+        <figcaption>Assembly of the ram pump system at the project site.</figcaption>
+      </figure>
+
+      <figure class="deployment-slide">
+        <video controls playsinline preload="metadata">
+          <source src="{{ '/assets/images/ram-pump/deployment/fill-bucket.mp4' | relative_url }}" type="video/mp4" />
+        </video>
+        <figcaption>Filling the bucket and testing the water transfer process during deployment.</figcaption>
+      </figure>
+
+      <figure class="deployment-slide">
+        <img src="{{ '/assets/images/ram-pump/deployment/moro-installment.png' | relative_url }}" alt="Installation at the Moroceli plant" />
+        <figcaption>Field installation at the Moroceli plant.</figcaption>
+      </figure>
+
+      <figure class="deployment-slide">
+        <img src="{{ '/assets/images/ram-pump/deployment/sjp-installment.JPG' | relative_url }}" alt="Installation at the San Juan Planes plant" />
+        <figcaption>Installation at the San Juan Planes site with local team support.</figcaption>
+      </figure>
+
+      <figure class="deployment-slide">
+        <img src="{{ '/assets/images/ram-pump/deployment/training.png' | relative_url }}" alt="Training the plant operators" />
+        <figcaption>Training local operators and technicians on system operation and maintenance.</figcaption>
+      </figure>
+
+      <figure class="deployment-slide">
+        <video controls playsinline preload="metadata">
+          <source src="{{ '/assets/images/ram-pump/deployment/operation.MOV' | relative_url }}" type="video/mp4" />
+        </video>
+        <figcaption>Field operation of the installed ACVRP system under real flow conditions.</figcaption>
+      </figure>
+
+      <figure class="deployment-slide">
+        <video controls playsinline preload="metadata">
+          <source src="{{ '/assets/images/ram-pump/deployment/spring.MOV' | relative_url }}" type="video/mp4" />
+        </video>
+        <figcaption>Spring behavior and valve response during system operation and calibration.</figcaption>
+      </figure>
+    </div>
+
+    <button class="deployment-carousel-btn next" type="button" aria-label="Next deployment media">&#10095;</button>
+  </div>
+</div>
+
+<script>
+  const deploymentSlides = Array.from(document.querySelectorAll('.deployment-slide'));
+  const deploymentTrack = document.querySelector('.deployment-carousel-track');
+  const deploymentPrev = document.querySelector('.deployment-carousel-btn.prev');
+  const deploymentNext = document.querySelector('.deployment-carousel-btn.next');
+  let deploymentCurrent = 0;
+  let deploymentTimer;
+
+  function showDeploymentSlide(index) {
+    deploymentCurrent = (index + deploymentSlides.length) % deploymentSlides.length;
+    deploymentTrack.style.transform = `translateX(-${deploymentCurrent * 100}%)`;
+  }
+
+  function resetDeploymentTimer() {
+    clearInterval(deploymentTimer);
+    deploymentTimer = setInterval(() => {
+      showDeploymentSlide(deploymentCurrent + 1);
+    }, 5000);
+  }
+
+  function deploymentGoNext() {
+    showDeploymentSlide(deploymentCurrent + 1);
+    resetDeploymentTimer();
+  }
+
+  function deploymentGoPrev() {
+    showDeploymentSlide(deploymentCurrent - 1);
+    resetDeploymentTimer();
+  }
+
+  if (deploymentSlides.length > 0) {
+    showDeploymentSlide(0);
+    deploymentPrev.addEventListener('click', deploymentGoPrev);
+    deploymentNext.addEventListener('click', deploymentGoNext);
+    resetDeploymentTimer();
+  }
+</script>
 
 ---
